@@ -1,0 +1,203 @@
+2021-01-30 14:10:43.423  INFO 17668 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 17668 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-01-30 14:10:43.425  INFO 17668 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-01-30 14:10:43.461  INFO 17668 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-30 14:10:43.471  INFO 17668 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-30 14:10:44.164  INFO 17668 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-30 14:10:44.202  INFO 17668 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 32 ms. Found 1 JPA repository interfaces.
+2021-01-30 14:10:44.593  INFO 17668 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-30 14:10:44.598  INFO 17668 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-30 14:10:44.599  INFO 17668 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-30 14:10:44.668  INFO 17668 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-30 14:10:44.668  INFO 17668 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1196 ms
+2021-01-30 14:10:44.743  INFO 17668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-30 14:10:44.807  INFO 17668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-30 14:10:44.811  INFO 17668 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:cce3a6bd-67a5-41a6-8842-020bcc2a9c2b'
+2021-01-30 14:10:44.906  INFO 17668 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-01-30 14:10:44.916  INFO 17668 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:cce3a6bd-67a5-41a6-8842-020bcc2a9c2b (H2 1.4)
+2021-01-30 14:10:44.957  INFO 17668 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-01-30 14:10:44.962  INFO 17668 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-01-30 14:10:55.094  INFO 17668 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-01-30 14:11:04.177  WARN 17668 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unable to parse statement in  at line 1 col 1. See https://flywaydb.org/documentation/knownparserlimitations for more information: No value provided for placeholder: ${ENV_VARIABLE_USERNAME}.  Check your configuration!
+2021-01-30 14:11:04.178  INFO 17668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2021-01-30 14:11:04.182  INFO 17668 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2021-01-30 14:11:04.187  INFO 17668 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2021-01-30 14:11:04.208  INFO 17668 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2021-01-30 14:11:04.226 ERROR 17668 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'flywayInitializer' defined in class path resource [org/springframework/boot/autoconfigure/flyway/FlywayAutoConfiguration$FlywayConfiguration.class]: Invocation of init method failed; nested exception is org.flywaydb.core.api.FlywayException: Unable to parse statement in  at line 1 col 1. See https://flywaydb.org/documentation/knownparserlimitations for more information: No value provided for placeholder: ${ENV_VARIABLE_USERNAME}.  Check your configuration!
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:322) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.getBean(AbstractApplicationContext.java:1159) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:913) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
+	at com.gmail.renjithkumar1.salarymanagement.SalaryManagementServiceApplication.main(SalaryManagementServiceApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
+Caused by: org.flywaydb.core.api.FlywayException: Unable to parse statement in  at line 1 col 1. See https://flywaydb.org/documentation/knownparserlimitations for more information: No value provided for placeholder: ${ENV_VARIABLE_USERNAME}.  Check your configuration!
+	at org.flywaydb.core.internal.parser.Parser.getNextStatement(Parser.java:295) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.parser.Parser$ParserSqlStatementIterator.<init>(Parser.java:665) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.parser.Parser.parse(Parser.java:115) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParserSqlScript.parse(ParserSqlScript.java:79) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParserSqlScript.validate(ParserSqlScript.java:127) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.ParserSqlScript.getSqlStatements(ParserSqlScript.java:133) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.sqlscript.DefaultSqlScriptExecutor.execute(DefaultSqlScriptExecutor.java:96) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory$1$1.call(JdbcTableSchemaHistory.java:113) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory$1.call(JdbcTableSchemaHistory.java:109) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate$1.call(TableLockingExecutionTemplate.java:38) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TransactionalExecutionTemplate.execute(TransactionalExecutionTemplate.java:66) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.jdbc.TableLockingExecutionTemplate.execute(TableLockingExecutionTemplate.java:33) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.database.base.Connection.lock(Connection.java:129) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.schemahistory.JdbcTableSchemaHistory.create(JdbcTableSchemaHistory.java:99) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:210) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.Flyway$1.execute(Flyway.java:164) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.Flyway.execute(Flyway.java:538) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.Flyway.migrate(Flyway.java:164) ~[flyway-core-7.1.1.jar:na]
+	at org.springframework.boot.autoconfigure.flyway.FlywayMigrationInitializer.afterPropertiesSet(FlywayMigrationInitializer.java:66) ~[spring-boot-autoconfigure-2.4.2.jar:2.4.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
+	... 24 common frames omitted
+Caused by: org.flywaydb.core.api.FlywayException: No value provided for placeholder: ${ENV_VARIABLE_USERNAME}.  Check your configuration!
+	at org.flywaydb.core.internal.parser.PlaceholderReplacingReader.read(PlaceholderReplacingReader.java:150) ~[flyway-core-7.1.1.jar:na]
+	at java.base/java.io.FilterReader.read(FilterReader.java:65) ~[na:na]
+	at org.flywaydb.core.internal.parser.PositionTrackingReader.read(PositionTrackingReader.java:33) ~[flyway-core-7.1.1.jar:na]
+	at java.base/java.io.FilterReader.read(FilterReader.java:65) ~[na:na]
+	at org.flywaydb.core.internal.parser.RecordingReader.read(RecordingReader.java:33) ~[flyway-core-7.1.1.jar:na]
+	at java.base/java.io.FilterReader.read(FilterReader.java:65) ~[na:na]
+	at org.flywaydb.core.internal.parser.PeekingReader.refillPeekBuffer(PeekingReader.java:73) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.parser.PeekingReader.peek(PeekingReader.java:183) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.parser.PeekingReader.peek(PeekingReader.java:165) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.parser.Parser.readToken(Parser.java:457) ~[flyway-core-7.1.1.jar:na]
+	at org.flywaydb.core.internal.parser.Parser.getNextStatement(Parser.java:162) ~[flyway-core-7.1.1.jar:na]
+	... 45 common frames omitted
+
+2021-01-30 14:14:31.432  INFO 15484 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 15484 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-01-30 14:14:31.434  INFO 15484 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-01-30 14:14:31.475  INFO 15484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-30 14:14:31.475  INFO 15484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-30 14:14:32.217  INFO 15484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-30 14:14:32.255  INFO 15484 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 31 ms. Found 1 JPA repository interfaces.
+2021-01-30 14:14:32.664  INFO 15484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-30 14:14:32.672  INFO 15484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-30 14:14:32.672  INFO 15484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-30 14:14:32.748  INFO 15484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-30 14:14:32.748  INFO 15484 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1272 ms
+2021-01-30 14:14:32.823  INFO 15484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-30 14:14:32.892  INFO 15484 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-30 14:14:32.897  INFO 15484 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-01-30 14:14:33.006  INFO 15484 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-01-30 14:14:33.012  INFO 15484 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-01-30 14:14:33.047  INFO 15484 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-01-30 14:14:33.053  INFO 15484 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-01-30 14:14:33.094  INFO 15484 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-01-30 14:14:33.097  INFO 15484 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-01-30 14:14:33.114  INFO 15484 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.027s)
+2021-01-30 14:14:33.184  INFO 15484 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-30 14:14:33.217  INFO 15484 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-01-30 14:14:33.285  INFO 15484 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-30 14:14:33.349  INFO 15484 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-30 14:14:33.676  INFO 15484 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-30 14:14:33.682  INFO 15484 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-30 14:14:33.705  INFO 15484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-30 14:14:33.980  WARN 15484 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-30 14:14:34.083  INFO 15484 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-30 14:14:34.817  INFO 15484 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-30 14:14:34.865  INFO 15484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-30 14:14:34.881  INFO 15484 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.797 seconds (JVM running for 4.488)
+2021-01-30 14:14:35.090  INFO 15484 --- [RMI TCP Connection(2)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-30 14:14:35.090  INFO 15484 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-30 14:14:35.091  INFO 15484 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
+2021-01-30 14:28:36.682  INFO 37444 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 37444 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-01-30 14:28:36.684  INFO 37444 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-01-30 14:28:36.721  INFO 37444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-30 14:28:36.722  INFO 37444 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-30 14:28:37.472  INFO 37444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-30 14:28:37.512  INFO 37444 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interfaces.
+2021-01-30 14:28:37.907  INFO 37444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-30 14:28:37.913  INFO 37444 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-30 14:28:37.914  INFO 37444 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-30 14:28:37.993  INFO 37444 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-30 14:28:37.993  INFO 37444 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1271 ms
+2021-01-30 14:28:38.070  INFO 37444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-30 14:28:38.135  INFO 37444 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-30 14:28:38.139  INFO 37444 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-01-30 14:28:38.232  INFO 37444 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-01-30 14:28:38.237  INFO 37444 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-01-30 14:28:38.273  INFO 37444 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-01-30 14:28:38.279  INFO 37444 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-01-30 14:28:38.321  INFO 37444 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-01-30 14:28:38.325  INFO 37444 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-01-30 14:28:38.345  INFO 37444 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.031s)
+2021-01-30 14:28:38.416  INFO 37444 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-30 14:28:38.446  INFO 37444 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-01-30 14:28:38.530  INFO 37444 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-30 14:28:38.591  INFO 37444 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-30 14:28:38.905  INFO 37444 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-30 14:28:38.911  INFO 37444 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-30 14:28:38.935  INFO 37444 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-30 14:28:39.207  WARN 37444 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-30 14:28:39.288  INFO 37444 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-30 14:28:39.856  INFO 37444 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-30 14:28:39.902  INFO 37444 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-30 14:28:39.915  INFO 37444 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.576 seconds (JVM running for 4.236)
+2021-01-30 14:28:40.320  INFO 37444 --- [RMI TCP Connection(1)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-30 14:28:40.320  INFO 37444 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-30 14:28:40.321  INFO 37444 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-01-30 14:29:42.482  INFO 37444 --- [http-nio-8080-exec-1] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 175 ms
+2021-01-30 14:30:21.982  INFO 37444 --- [http-nio-8080-exec-3] c.g.r.s.c.SalaryManagementController     : New salary record was created as :[201, SalaryDto(name=Renjith Kumar G K, login=renjith, salary=2222220, startDate=Sat Jan 30 14:29:51 SGT 2021)]
+2021-01-30 14:31:55.688  INFO 37444 --- [http-nio-8080-exec-4] c.g.r.s.c.SalaryManagementController     : New salary record was created as :[201, SalaryDto(name=Rβenj~ith Ku^ma&r G K, login=test, salary=1220, startDate=Sun Jan 10 14:29:51 SGT 2021)]
+2021-01-30 15:19:11.884  INFO 18084 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 18084 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-01-30 15:19:11.889  INFO 18084 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-01-30 15:19:11.925  INFO 18084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-01-30 15:19:11.926  INFO 18084 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-01-30 15:19:12.666  INFO 18084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-01-30 15:19:12.709  INFO 18084 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2021-01-30 15:19:13.132  INFO 18084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-01-30 15:19:13.138  INFO 18084 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-01-30 15:19:13.139  INFO 18084 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-01-30 15:19:13.212  INFO 18084 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-01-30 15:19:13.212  INFO 18084 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1285 ms
+2021-01-30 15:19:13.291  INFO 18084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-01-30 15:19:13.356  INFO 18084 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-01-30 15:19:13.360  INFO 18084 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-01-30 15:19:13.460  INFO 18084 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-01-30 15:19:13.465  INFO 18084 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-01-30 15:19:13.501  INFO 18084 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-01-30 15:19:13.508  INFO 18084 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-01-30 15:19:13.550  INFO 18084 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-01-30 15:19:13.554  INFO 18084 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-01-30 15:19:13.577  INFO 18084 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.033s)
+2021-01-30 15:19:13.662  INFO 18084 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-01-30 15:19:13.699  INFO 18084 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-01-30 15:19:13.776  INFO 18084 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-01-30 15:19:13.844  INFO 18084 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-01-30 15:19:14.163  INFO 18084 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-01-30 15:19:14.168  INFO 18084 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-01-30 15:19:14.199  INFO 18084 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-01-30 15:19:14.452  WARN 18084 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-01-30 15:19:14.535  INFO 18084 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-30 15:19:15.150  INFO 18084 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-01-30 15:19:15.193  INFO 18084 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-01-30 15:19:15.207  INFO 18084 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.691 seconds (JVM running for 4.359)
+2021-01-30 15:19:15.478  INFO 18084 --- [RMI TCP Connection(1)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-01-30 15:19:15.478  INFO 18084 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-01-30 15:19:15.480  INFO 18084 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
