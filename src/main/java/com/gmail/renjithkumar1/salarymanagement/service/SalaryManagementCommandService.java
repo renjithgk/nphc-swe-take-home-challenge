@@ -1,13 +1,17 @@
 package com.gmail.renjithkumar1.salarymanagement.service;
 
-import com.gmail.renjithkumar1.salarymanagement.dto.SalaryDto;
-import com.gmail.renjithkumar1.salarymanagement.entity.Salary;
+import com.gmail.renjithkumar1.salarymanagement.dto.EmployeeDto;
+import com.gmail.renjithkumar1.salarymanagement.entity.Employee;
+import com.gmail.renjithkumar1.salarymanagement.exception.EntityNotFoundException;
+import com.gmail.renjithkumar1.salarymanagement.exception.ResourceAlreadyExistsException;
 import com.gmail.renjithkumar1.salarymanagement.repository.SalaryManagementRepository;
 import com.gmail.renjithkumar1.salarymanagement.service.interfaces.ISalaryManagementCommandService;
 import com.gmail.renjithkumar1.salarymanagement.utils.DtoUtils;
-import org.javatuples.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
+import java.util.Optional;
 
 @Service
 public class SalaryManagementCommandService implements ISalaryManagementCommandService {
@@ -19,27 +23,60 @@ public class SalaryManagementCommandService implements ISalaryManagementCommandS
         this.salaryManagementRepository = salaryManagementRepository;
     }
 
-    public Pair<Integer, SalaryDto> createSalary(SalaryDto salaryDto) {
-        Salary salary = (Salary) new DtoUtils().convertToEntity(new Salary(), salaryDto);
-        Salary saved = this.salaryManagementRepository.save(salary);
-        return new Pair<>(201, salaryDto);
+    public EmployeeDto createEmployee(EmployeeDto employeeDto) {
+        employeeDto.validate();
+        List<Employee> employeeList = salaryManagementRepository.findAll();
+        Employee existingEmployee = employeeList.stream().filter(e -> employeeDto.getId().equals(e.getId())).findAny().orElse(null);
+        if (existingEmployee != null) {
+            throw new ResourceAlreadyExistsException("Employee ID already exists");
+        }
+
+        existingEmployee = employeeList.stream().filter(e -> employeeDto.getLogin().equals(e.getLogin())).findAny().orElse(null);
+        if (existingEmployee != null) {
+            throw new ResourceAlreadyExistsException("Employee login not unique");
+        }
+
+        Employee employee = (Employee) new DtoUtils().convertToEntity(new Employee(), employeeDto);
+        Employee savedEmployee = this.salaryManagementRepository.save(employee);
+        return (EmployeeDto) new DtoUtils().convertToDto(savedEmployee, new EmployeeDto());
     }
 
     @Override
-    public Pair<Integer, SalaryDto> updateSalary(Long id, SalaryDto salaryDto) {
-        Salary salary = salaryManagementRepository.findById(id).map(s ->
+    public EmployeeDto updateEmployee(String id, EmployeeDto employeeDto) {
+
+        employeeDto.validate();
+
+        List<Employee> employeeList = salaryManagementRepository.findAll();
+
+        Employee existingEmployee = employeeList.stream().filter(e -> employeeDto.getLogin().equals(e.getLogin())).findAny().orElse(null);
+        if (existingEmployee != null && existingEmployee.getId() != employeeDto.getId()) {
+            throw new ResourceAlreadyExistsException("Employee login not unique");
+        }
+
+        Employee employee = salaryManagementRepository.findById(id).map(s ->
         {
-            s.setSalary(salaryDto.getSalary());
-            s.setName(salaryDto.getName());
+            s.setName(employeeDto.getName());
+            s.setLogin(employeeDto.getLogin());
+            s.setSalary(employeeDto.getSalary());
+            s.setStartDate(employeeDto.getStartDate());
             return s;
         }).orElse(null);
-        Salary saved = this.salaryManagementRepository.save(salary);
-        return new Pair<>(201, salaryDto);
+
+        if (employee == null) {
+            throw new EntityNotFoundException("No such employee");
+        }
+
+
+        Employee savedEmployee = this.salaryManagementRepository.save(employee);
+        return (EmployeeDto) new DtoUtils().convertToDto(savedEmployee, new EmployeeDto());
     }
 
     @Override
-    public Pair<Integer, String> deleteSalary(Long id) {
-       salaryManagementRepository.deleteById(id);
-       return new Pair<>(200, "Deleted record successfully");
+    public void deleteEmployee(String id) {
+        Optional<Employee> employee = salaryManagementRepository.findById(id);
+        if (employee.isPresent()) {
+            salaryManagementRepository.deleteById(id);
+        }
+        throw new EntityNotFoundException("No such employee");
     }
 }

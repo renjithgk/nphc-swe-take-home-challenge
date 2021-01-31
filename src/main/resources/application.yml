@@ -1,6 +1,6 @@
 app:
-  name: SettlementService
-  description: SettlementService
+  name: SalaryManagementService
+  description: SalaryManagementService
   version: 1.0.0
 
 

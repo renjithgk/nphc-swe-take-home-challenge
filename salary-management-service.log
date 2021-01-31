@@ -1,703 +1,399 @@
-2021-01-31 13:35:27.456  INFO 8884 --- [main] .SalaryManagementServiceApplicationTests : Starting SalaryManagementServiceApplicationTests using Java 15 on SGSCECM-4LWQJW2 with PID 8884 (started by renjithkumar.gk in C:\Projects\salary-management-service)
-2021-01-31 13:35:27.465  INFO 8884 --- [main] .SalaryManagementServiceApplicationTests : No active profile set, falling back to default profiles: default
-2021-01-31 13:35:28.812  INFO 8884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-01-31 13:35:28.886  INFO 8884 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 63 ms. Found 1 JPA repository interfaces.
-2021-01-31 13:35:29.636  INFO 8884 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
-2021-01-31 13:35:29.857  INFO 8884 --- [main] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
-2021-01-31 13:35:29.932  INFO 8884 --- [main] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
-2021-01-31 13:35:29.943  INFO 8884 --- [main] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
-2021-01-31 13:35:30.021  INFO 8884 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
-2021-01-31 13:35:30.027  INFO 8884 --- [main] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
-2021-01-31 13:35:30.058  INFO 8884 --- [main] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.052s)
-2021-01-31 13:35:30.123  INFO 8884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-31 13:35:30.139  INFO 8884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-31 13:35:30.219  INFO 8884 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-31 13:35:30.297  INFO 8884 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2021-01-31 13:35:30.512  INFO 8884 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-01-31 13:35:30.797  INFO 8884 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-31 13:35:31.544  INFO 8884 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-31 13:35:31.550  INFO 8884 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:35:32.345  WARN 8884 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-31 13:35:32.707  INFO 8884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:35:32.802  INFO 8884 --- [main] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
-2021-01-31 13:35:32.866  WARN 8884 --- [main] o.s.w.c.s.GenericWebApplicationContext   : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-2021-01-31 13:35:32.866  INFO 8884 --- [main] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:35:32.868  INFO 8884 --- [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:35:32.869  INFO 8884 --- [main] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-01-31 13:35:32.875  INFO 8884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-01-31 13:35:32.878  INFO 8884 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-01-31 13:35:32.892  INFO 8884 --- [main] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-01-31 13:35:32.919 ERROR 8884 --- [main] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) ~[spring-boot-test-2.4.2.jar:2.4.2]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
-	... 83 common frames omitted
-
-2021-01-31 13:35:32.924 ERROR 8884 --- [main] o.s.test.context.TestContextManager      : Caught exception while allowing TestExecutionListener [org.springframework.test.context.web.ServletTestExecutionListener@1046d517] to prepare test instance [com.gmail.renjithkumar1.salarymanagement.SalaryManagementServiceApplicationTests@45f70f68]
-
-java.lang.IllegalStateException: Failed to load ApplicationContext
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:132) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.support.DefaultTestContext.getApplicationContext(DefaultTestContext.java:124) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.web.ServletTestExecutionListener.setUpRequestContextIfNecessary(ServletTestExecutionListener.java:190) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.web.ServletTestExecutionListener.prepareTestInstance(ServletTestExecutionListener.java:132) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.TestContextManager.prepareTestInstance(TestContextManager.java:244) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.junit.jupiter.SpringExtension.postProcessTestInstance(SpringExtension.java:138) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$6(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.executeAndMaskThrowable(ClassBasedTestDescriptor.java:355) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$invokeTestInstancePostProcessors$7(ClassBasedTestDescriptor.java:350) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$2$1.accept(ReferencePipeline.java:177) ~[na:na]
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1625) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484) ~[na:na]
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474) ~[na:na]
-	at java.base/java.util.stream.StreamSpliterators$WrappingSpliterator.forEachRemaining(StreamSpliterators.java:312) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:735) ~[na:na]
-	at java.base/java.util.stream.Streams$ConcatSpliterator.forEachRemaining(Streams.java:734) ~[na:na]
-	at java.base/java.util.stream.ReferencePipeline$Head.forEach(ReferencePipeline.java:658) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.invokeTestInstancePostProcessors(ClassBasedTestDescriptor.java:349) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$instantiateAndPostProcessTestInstance$4(ClassBasedTestDescriptor.java:270) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.instantiateAndPostProcessTestInstance(ClassBasedTestDescriptor.java:269) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$2(ClassBasedTestDescriptor.java:259) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at java.base/java.util.Optional.orElseGet(Optional.java:362) ~[na:na]
-	at org.junit.jupiter.engine.descriptor.ClassBasedTestDescriptor.lambda$testInstancesProvider$3(ClassBasedTestDescriptor.java:258) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.execution.TestInstancesProvider.getTestInstances(TestInstancesProvider.java:31) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.lambda$prepare$0(TestMethodTestDescriptor.java:101) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:100) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.jupiter.engine.descriptor.TestMethodTestDescriptor.prepare(TestMethodTestDescriptor.java:65) ~[junit-jupiter-engine-5.7.0.jar:5.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$prepare$1(NodeTestTask.java:111) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.prepare(NodeTestTask.java:111) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:79) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1511) ~[na:na]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:38) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$5(NodeTestTask.java:143) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$7(NodeTestTask.java:129) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:127) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:126) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:84) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:32) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:51) ~[junit-platform-engine-1.7.0.jar:1.7.0]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:220) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.lambda$execute$6(DefaultLauncher.java:188) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.withInterceptedStreams(DefaultLauncher.java:202) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:181) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:128) ~[junit-platform-launcher-1.3.1.jar:1.3.1]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invokeAllTests(JUnitPlatformProvider.java:150) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.junitplatform.JUnitPlatformProvider.invoke(JUnitPlatformProvider.java:124) ~[surefire-junit-platform-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.invokeProviderInSameClassLoader(ForkedBooter.java:384) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.runSuitesInProcess(ForkedBooter.java:345) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.execute(ForkedBooter.java:126) ~[surefire-booter-2.22.2.jar:2.22.2]
-	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:418) ~[surefire-booter-2.22.2.jar:2.22.2]
-Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.test.context.SpringBootContextLoader.loadContext(SpringBootContextLoader.java:123) ~[spring-boot-test-2.4.2.jar:2.4.2]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContextInternal(DefaultCacheAwareContextLoaderDelegate.java:99) ~[spring-test-5.3.3.jar:5.3.3]
-	at org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate.loadContext(DefaultCacheAwareContextLoaderDelegate.java:124) ~[spring-test-5.3.3.jar:5.3.3]
-	... 67 common frames omitted
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
-	... 83 common frames omitted
-
-2021-01-31 13:36:46.141  INFO 13184 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 13184 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
-2021-01-31 13:36:46.144  INFO 13184 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
-2021-01-31 13:36:46.175  INFO 13184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-01-31 13:36:46.175  INFO 13184 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-01-31 13:36:46.971  INFO 13184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-01-31 13:36:47.014  INFO 13184 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
-2021-01-31 13:36:47.437  INFO 13184 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-01-31 13:36:47.444  INFO 13184 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-01-31 13:36:47.444  INFO 13184 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-01-31 13:36:47.534  INFO 13184 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-01-31 13:36:47.535  INFO 13184 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1359 ms
-2021-01-31 13:36:47.610  INFO 13184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-31 13:36:47.673  INFO 13184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-31 13:36:47.678  INFO 13184 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
-2021-01-31 13:36:47.790  INFO 13184 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
-2021-01-31 13:36:47.795  INFO 13184 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
-2021-01-31 13:36:47.840  INFO 13184 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
-2021-01-31 13:36:47.855  INFO 13184 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
-2021-01-31 13:36:47.899  INFO 13184 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
-2021-01-31 13:36:47.902  INFO 13184 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
-2021-01-31 13:36:47.919  INFO 13184 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.026s)
-2021-01-31 13:36:47.966  INFO 13184 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-31 13:36:47.993  INFO 13184 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2021-01-31 13:36:48.059  INFO 13184 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-01-31 13:36:48.123  INFO 13184 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-31 13:36:48.471  INFO 13184 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-31 13:36:48.477  INFO 13184 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:36:48.500  INFO 13184 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-01-31 13:36:48.742  WARN 13184 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-31 13:36:48.820  INFO 13184 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:36:48.870  WARN 13184 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-2021-01-31 13:36:48.870  INFO 13184 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:36:48.871  INFO 13184 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:36:48.871  INFO 13184 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-01-31 13:36:49.080  WARN 13184 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-01-31 13:36:49.081  INFO 13184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-01-31 13:36:49.087  INFO 13184 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-01-31 13:36:49.091  INFO 13184 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-01-31 13:36:49.115  INFO 13184 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-01-31 13:36:49.133 ERROR 13184 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
-	at com.gmail.renjithkumar1.salarymanagement.SalaryManagementServiceApplication.main(SalaryManagementServiceApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
-	... 22 common frames omitted
-
-2021-01-31 13:38:17.856  INFO 1112 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 1112 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
-2021-01-31 13:38:17.858  INFO 1112 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
-2021-01-31 13:38:17.902  INFO 1112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-01-31 13:38:17.903  INFO 1112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-01-31 13:38:18.640  INFO 1112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-01-31 13:38:18.680  INFO 1112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
-2021-01-31 13:38:19.076  INFO 1112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-01-31 13:38:19.082  INFO 1112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-01-31 13:38:19.083  INFO 1112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-01-31 13:38:19.156  INFO 1112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-01-31 13:38:19.156  INFO 1112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1253 ms
-2021-01-31 13:38:19.232  INFO 1112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-31 13:38:19.296  INFO 1112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-31 13:38:19.300  INFO 1112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
-2021-01-31 13:38:19.395  INFO 1112 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
-2021-01-31 13:38:19.400  INFO 1112 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
-2021-01-31 13:38:19.445  INFO 1112 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
-2021-01-31 13:38:19.458  INFO 1112 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
-2021-01-31 13:38:19.499  INFO 1112 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
-2021-01-31 13:38:19.503  INFO 1112 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
-2021-01-31 13:38:19.521  INFO 1112 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.028s)
-2021-01-31 13:38:19.568  INFO 1112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-31 13:38:19.597  INFO 1112 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2021-01-31 13:38:19.660  INFO 1112 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-01-31 13:38:19.723  INFO 1112 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-31 13:38:20.104  INFO 1112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-31 13:38:20.109  INFO 1112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:38:20.131  INFO 1112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-01-31 13:38:20.369  WARN 1112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-31 13:38:20.450  INFO 1112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:38:20.492  WARN 1112 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-2021-01-31 13:38:20.492  INFO 1112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:38:20.494  INFO 1112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:38:20.494  INFO 1112 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-01-31 13:38:20.701  WARN 1112 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-01-31 13:38:20.703  INFO 1112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-01-31 13:38:20.707  INFO 1112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-01-31 13:38:20.712  INFO 1112 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-01-31 13:38:20.740  INFO 1112 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-01-31 13:38:20.757 ERROR 1112 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
-	at com.gmail.renjithkumar1.salarymanagement.SalaryManagementServiceApplication.main(SalaryManagementServiceApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
-	... 22 common frames omitted
-
-2021-01-31 13:43:17.944  INFO 42108 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 42108 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
-2021-01-31 13:43:17.946  INFO 42108 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
-2021-01-31 13:43:17.988  INFO 42108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-01-31 13:43:17.988  INFO 42108 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-01-31 13:43:18.751  INFO 42108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-01-31 13:43:18.796  INFO 42108 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 39 ms. Found 1 JPA repository interfaces.
-2021-01-31 13:43:19.208  INFO 42108 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-01-31 13:43:19.215  INFO 42108 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-01-31 13:43:19.215  INFO 42108 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-01-31 13:43:19.307  INFO 42108 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-01-31 13:43:19.307  INFO 42108 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1318 ms
-2021-01-31 13:43:19.379  INFO 42108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-31 13:43:19.447  INFO 42108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-31 13:43:19.451  INFO 42108 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
-2021-01-31 13:43:19.544  INFO 42108 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
-2021-01-31 13:43:19.550  INFO 42108 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
-2021-01-31 13:43:19.595  INFO 42108 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
-2021-01-31 13:43:19.604  INFO 42108 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
-2021-01-31 13:43:19.650  INFO 42108 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
-2021-01-31 13:43:19.654  INFO 42108 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
-2021-01-31 13:43:19.669  INFO 42108 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.025s)
-2021-01-31 13:43:19.715  INFO 42108 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-31 13:43:19.742  INFO 42108 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2021-01-31 13:43:19.809  INFO 42108 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-01-31 13:43:19.869  INFO 42108 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-31 13:43:20.217  INFO 42108 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-31 13:43:20.223  INFO 42108 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:43:20.246  INFO 42108 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-01-31 13:43:20.480  WARN 42108 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-31 13:43:20.566  INFO 42108 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:43:20.607  WARN 42108 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-2021-01-31 13:43:20.608  INFO 42108 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:43:20.609  INFO 42108 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:43:20.609  INFO 42108 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-01-31 13:43:20.815  WARN 42108 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-01-31 13:43:20.816  INFO 42108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-01-31 13:43:20.818  INFO 42108 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-01-31 13:43:20.821  INFO 42108 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-01-31 13:43:20.838  INFO 42108 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-01-31 13:43:20.855 ERROR 42108 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
-	at com.gmail.renjithkumar1.salarymanagement.SalaryManagementServiceApplication.main(SalaryManagementServiceApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#fetch()
-to {GET [/api/v1/users], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#get(Long) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
-	... 22 common frames omitted
-
-2021-01-31 13:49:15.955  INFO 29656 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 29656 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
-2021-01-31 13:49:15.958  INFO 29656 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
-2021-01-31 13:49:15.996  INFO 29656 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-01-31 13:49:15.997  INFO 29656 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-01-31 13:49:16.722  INFO 29656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-01-31 13:49:16.762  INFO 29656 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
-2021-01-31 13:49:17.155  INFO 29656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-01-31 13:49:17.161  INFO 29656 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-01-31 13:49:17.161  INFO 29656 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-01-31 13:49:17.239  INFO 29656 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-01-31 13:49:17.239  INFO 29656 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1241 ms
-2021-01-31 13:49:17.316  INFO 29656 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-31 13:49:17.385  INFO 29656 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-31 13:49:17.390  INFO 29656 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
-2021-01-31 13:49:17.482  INFO 29656 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
-2021-01-31 13:49:17.487  INFO 29656 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
-2021-01-31 13:49:17.535  INFO 29656 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
-2021-01-31 13:49:17.551  INFO 29656 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
-2021-01-31 13:49:17.602  INFO 29656 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
-2021-01-31 13:49:17.605  INFO 29656 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
-2021-01-31 13:49:17.622  INFO 29656 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.028s)
-2021-01-31 13:49:17.673  INFO 29656 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-31 13:49:17.701  INFO 29656 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2021-01-31 13:49:17.766  INFO 29656 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-01-31 13:49:17.832  INFO 29656 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-31 13:49:18.191  INFO 29656 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-31 13:49:18.196  INFO 29656 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 13:49:18.220  INFO 29656 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-01-31 13:49:18.461  WARN 29656 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-31 13:49:18.535  INFO 29656 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-31 13:49:19.229  INFO 29656 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-01-31 13:49:19.276  INFO 29656 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-01-31 13:49:19.291  INFO 29656 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.681 seconds (JVM running for 4.358)
-2021-01-31 13:49:19.557  INFO 29656 --- [RMI TCP Connection(2)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-01-31 13:49:19.557  INFO 29656 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-01-31 13:49:19.558  INFO 29656 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
-2021-01-31 13:50:14.548  INFO 29656 --- [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 253 ms
-2021-01-31 14:15:41.904  INFO 50516 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 50516 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
-2021-01-31 14:15:41.906  INFO 50516 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
-2021-01-31 14:15:41.947  INFO 50516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-01-31 14:15:41.947  INFO 50516 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-01-31 14:15:42.676  INFO 50516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-01-31 14:15:42.716  INFO 50516 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 34 ms. Found 1 JPA repository interfaces.
-2021-01-31 14:15:43.099  INFO 50516 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-01-31 14:15:43.105  INFO 50516 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-01-31 14:15:43.105  INFO 50516 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-01-31 14:15:43.191  INFO 50516 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-01-31 14:15:43.193  INFO 50516 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1246 ms
-2021-01-31 14:15:43.264  INFO 50516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-31 14:15:43.327  INFO 50516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-31 14:15:43.331  INFO 50516 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
-2021-01-31 14:15:43.422  INFO 50516 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
-2021-01-31 14:15:43.428  INFO 50516 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
-2021-01-31 14:15:43.471  INFO 50516 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
-2021-01-31 14:15:43.486  INFO 50516 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
-2021-01-31 14:15:43.529  INFO 50516 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
-2021-01-31 14:15:43.532  INFO 50516 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
-2021-01-31 14:15:43.549  INFO 50516 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.026s)
-2021-01-31 14:15:43.596  INFO 50516 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-31 14:15:43.623  INFO 50516 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2021-01-31 14:15:43.689  INFO 50516 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-01-31 14:15:43.751  INFO 50516 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-31 14:15:44.100  INFO 50516 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-31 14:15:44.105  INFO 50516 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 14:15:44.127  INFO 50516 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-01-31 14:15:44.367  WARN 50516 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-31 14:15:44.452  INFO 50516 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-31 14:15:44.507  WARN 50516 --- [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#create(SalaryDto)
-to {POST [/api/v1/users], consumes [application/json], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#update(SalaryDto, Long) mapped.
-2021-01-31 14:15:44.507  INFO 50516 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
-2021-01-31 14:15:44.508  INFO 50516 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 14:15:44.508  INFO 50516 --- [restartedMain] .SchemaDropperImpl$DelayedDropActionImpl : HHH000477: Starting delayed evictData of schema as part of SessionFactory shut-down'
-2021-01-31 14:15:44.716  WARN 50516 --- [restartedMain] o.s.b.f.support.DisposableBeanAdapter    : Invocation of destroy method failed on bean with name 'inMemoryDatabaseShutdownExecutor': org.h2.jdbc.JdbcSQLNonTransientConnectionException: Database is already closed (to disable automatic closing at VM shutdown, add ";DB_CLOSE_ON_EXIT=FALSE" to the db URL) [90121-200]
-2021-01-31 14:15:44.717  INFO 50516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
-2021-01-31 14:15:44.722  INFO 50516 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
-2021-01-31 14:15:44.726  INFO 50516 --- [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
-2021-01-31 14:15:44.757  INFO 50516 --- [restartedMain] ConditionEvaluationReportLoggingListener : 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-01-31 14:15:44.779 ERROR 50516 --- [restartedMain] o.s.boot.SpringApplication               : Application run failed
-
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'requestMappingHandlerMapping' defined in class path resource [org/springframework/boot/autoconfigure/web/servlet/WebMvcAutoConfiguration$EnableWebMvcConfiguration.class]: Invocation of init method failed; nested exception is java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#create(SalaryDto)
-to {POST [/api/v1/users], consumes [application/json], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#update(SalaryDto, Long) mapped.
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1788) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:609) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:531) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:944) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:923) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:588) ~[spring-context-5.3.3.jar:5.3.3]
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:144) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:767) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:759) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:426) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:326) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1311) ~[spring-boot-2.4.2.jar:2.4.2]
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1300) ~[spring-boot-2.4.2.jar:2.4.2]
-	at com.gmail.renjithkumar1.salarymanagement.SalaryManagementServiceApplication.main(SalaryManagementServiceApplication.java:10) ~[classes/:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[na:na]
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:64) ~[na:na]
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[na:na]
-	at java.base/java.lang.reflect.Method.invoke(Method.java:564) ~[na:na]
-	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:49) ~[spring-boot-devtools-2.4.2.jar:2.4.2]
-Caused by: java.lang.IllegalStateException: Ambiguous mapping. Cannot map 'userController' method 
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#create(SalaryDto)
-to {POST [/api/v1/users], consumes [application/json], produces [application/json]}: There is already 'userController' bean method
-com.gmail.renjithkumar1.salarymanagement.controller.UserController#update(SalaryDto, Long) mapped.
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.validateMethodMapping(AbstractHandlerMethodMapping.java:644) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping$MappingRegistry.register(AbstractHandlerMethodMapping.java:611) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.registerHandlerMethod(AbstractHandlerMethodMapping.java:316) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:395) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.registerHandlerMethod(RequestMappingHandlerMapping.java:76) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.lambda$detectHandlerMethods$2(AbstractHandlerMethodMapping.java:286) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at java.base/java.util.LinkedHashMap.forEach(LinkedHashMap.java:723) ~[na:na]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.detectHandlerMethods(AbstractHandlerMethodMapping.java:284) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.processCandidateBean(AbstractHandlerMethodMapping.java:256) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.initHandlerMethods(AbstractHandlerMethodMapping.java:215) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.handler.AbstractHandlerMethodMapping.afterPropertiesSet(AbstractHandlerMethodMapping.java:203) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerMapping.afterPropertiesSet(RequestMappingHandlerMapping.java:206) ~[spring-webmvc-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.invokeInitMethods(AbstractAutowireCapableBeanFactory.java:1847) ~[spring-beans-5.3.3.jar:5.3.3]
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.initializeBean(AbstractAutowireCapableBeanFactory.java:1784) ~[spring-beans-5.3.3.jar:5.3.3]
-	... 22 common frames omitted
-
-2021-01-31 14:22:52.057  INFO 46488 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 46488 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
-2021-01-31 14:22:52.059  INFO 46488 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
-2021-01-31 14:22:52.105  INFO 46488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2021-01-31 14:22:52.105  INFO 46488 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2021-01-31 14:22:52.831  INFO 46488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2021-01-31 14:22:52.874  INFO 46488 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
-2021-01-31 14:22:53.264  INFO 46488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
-2021-01-31 14:22:53.270  INFO 46488 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2021-01-31 14:22:53.270  INFO 46488 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
-2021-01-31 14:22:53.360  INFO 46488 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2021-01-31 14:22:53.360  INFO 46488 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1254 ms
-2021-01-31 14:22:53.435  INFO 46488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2021-01-31 14:22:53.499  INFO 46488 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2021-01-31 14:22:53.502  INFO 46488 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
-2021-01-31 14:22:53.590  INFO 46488 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
-2021-01-31 14:22:53.595  INFO 46488 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
-2021-01-31 14:22:53.641  INFO 46488 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
-2021-01-31 14:22:53.658  INFO 46488 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
-2021-01-31 14:22:53.699  INFO 46488 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
-2021-01-31 14:22:53.703  INFO 46488 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
-2021-01-31 14:22:53.719  INFO 46488 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.026s)
-2021-01-31 14:22:53.768  INFO 46488 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2021-01-31 14:22:53.797  INFO 46488 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
-2021-01-31 14:22:53.862  INFO 46488 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
-2021-01-31 14:22:53.923  INFO 46488 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
-2021-01-31 14:22:54.268  INFO 46488 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
-2021-01-31 14:22:54.273  INFO 46488 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2021-01-31 14:22:54.296  INFO 46488 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
-2021-01-31 14:22:54.541  WARN 46488 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
-2021-01-31 14:22:54.617  INFO 46488 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
-2021-01-31 14:22:55.185  INFO 46488 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
-2021-01-31 14:22:55.231  INFO 46488 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
-2021-01-31 14:22:55.244  INFO 46488 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.526 seconds (JVM running for 4.166)
-2021-01-31 14:22:55.703  INFO 46488 --- [RMI TCP Connection(1)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2021-01-31 14:22:55.705  INFO 46488 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2021-01-31 14:22:55.705  INFO 46488 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 0 ms
-2021-01-31 14:23:02.954  INFO 46488 --- [http-nio-8080-exec-8] o.springdoc.api.AbstractOpenApiResource  : Init duration for springdoc-openapi is: 163 ms
+2021-02-01 00:01:06.117  INFO 45796 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 45796 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:01:06.140  INFO 45796 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:01:06.182  INFO 45796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:01:06.183  INFO 45796 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:01:06.927  INFO 45796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:01:06.966  INFO 45796 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 38 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:01:07.375  INFO 45796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:01:07.377  INFO 45796 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:01:07.377  INFO 45796 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:01:07.456  INFO 45796 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:01:07.457  INFO 45796 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1272 ms
+2021-02-01 00:01:07.529  INFO 45796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:01:07.597  INFO 45796 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:01:07.599  INFO 45796 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:01:07.688  INFO 45796 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:01:07.695  INFO 45796 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:01:07.744  INFO 45796 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:01:07.760  INFO 45796 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:01:07.794  INFO 45796 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:01:07.794  INFO 45796 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:01:07.807  INFO 45796 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.022s)
+2021-02-01 00:01:07.861  INFO 45796 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:01:07.883  INFO 45796 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:01:07.960  INFO 45796 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:01:08.017  INFO 45796 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:01:08.369  INFO 45796 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:01:08.371  INFO 45796 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:01:08.397  INFO 45796 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:01:08.643  WARN 45796 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:01:08.727  INFO 45796 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:01:09.293  INFO 45796 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:01:09.339  INFO 45796 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:01:09.352  INFO 45796 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.582 seconds (JVM running for 4.259)
+2021-02-01 00:01:09.814  INFO 45796 --- [RMI TCP Connection(3)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:01:09.814  INFO 45796 --- [RMI TCP Connection(3)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:01:09.815  INFO 45796 --- [RMI TCP Connection(3)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:01:14.990  INFO 45796 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0003, login=hpotter3, name=Harry Potter3, salary=1234, startDate=2001-11-16)
+2021-02-01 00:01:18.530  WARN 45796 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.gmail.renjithkumar1.salarymanagement.exception.EntityNotFoundException: No such employee]
+2021-02-01 00:01:22.801  INFO 45796 --- [http-nio-8080-exec-3] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0003, login=hpotter3, name=Harry Potter3, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:01:39.658  INFO 45796 --- [http-nio-8080-exec-8] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:01:41.547  INFO 45796 --- [http-nio-8080-exec-5] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0003, login=hpotter3, name=Harry Potter3, salary=1234.00, startDate=2001-11-16), EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:02:46.136  INFO 9240 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 9240 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:02:46.138  INFO 9240 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:02:46.177  INFO 9240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:02:46.178  INFO 9240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:02:46.929  INFO 9240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:02:46.971  INFO 9240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:02:47.367  INFO 9240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:02:47.369  INFO 9240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:02:47.374  INFO 9240 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:02:47.431  INFO 9240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:02:47.446  INFO 9240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1252 ms
+2021-02-01 00:02:47.517  INFO 9240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:02:47.583  INFO 9240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:02:47.585  INFO 9240 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:02:47.663  INFO 9240 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:02:47.680  INFO 9240 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:02:47.727  INFO 9240 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:02:47.731  INFO 9240 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:02:47.780  INFO 9240 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:02:47.783  INFO 9240 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:02:47.789  INFO 9240 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.024s)
+2021-02-01 00:02:47.850  INFO 9240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:02:47.882  INFO 9240 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:02:47.946  INFO 9240 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:02:48.023  INFO 9240 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:02:48.384  INFO 9240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:02:48.390  INFO 9240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:02:48.413  INFO 9240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:02:48.645  WARN 9240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:02:48.729  INFO 9240 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:02:49.289  INFO 9240 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:02:49.332  INFO 9240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:02:49.346  INFO 9240 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.529 seconds (JVM running for 4.195)
+2021-02-01 00:02:49.482  INFO 9240 --- [RMI TCP Connection(1)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:02:49.483  INFO 9240 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:02:49.484  INFO 9240 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:02:57.532  INFO 9240 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:03:03.411  INFO 9240 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=null, login=null, name=null, salary=null, startDate=null)
+2021-02-01 00:03:12.900  INFO 9240 --- [http-nio-8080-exec-4] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:03:22.409  INFO 9240 --- [http-nio-8080-exec-5] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=null, login=null, name=null, salary=null, startDate=null)
+2021-02-01 00:07:02.678  INFO 46012 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 46012 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:07:02.680  INFO 46012 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:07:02.741  INFO 46012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:07:02.741  INFO 46012 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:07:03.573  INFO 46012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:07:03.635  INFO 46012 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 45 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:07:04.084  INFO 46012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:07:04.089  INFO 46012 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:07:04.091  INFO 46012 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:07:04.166  INFO 46012 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:07:04.166  INFO 46012 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1424 ms
+2021-02-01 00:07:04.259  INFO 46012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:07:04.333  INFO 46012 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:07:04.335  INFO 46012 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:07:04.434  INFO 46012 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:07:04.442  INFO 46012 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:07:04.490  INFO 46012 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:07:04.501  INFO 46012 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:07:04.550  INFO 46012 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:07:04.551  INFO 46012 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:07:04.567  INFO 46012 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.029s)
+2021-02-01 00:07:04.620  INFO 46012 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:07:04.652  INFO 46012 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:07:04.732  INFO 46012 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:07:04.804  INFO 46012 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:07:05.200  INFO 46012 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:07:05.206  INFO 46012 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:07:05.230  INFO 46012 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:07:05.488  WARN 46012 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:07:05.580  INFO 46012 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:07:06.212  INFO 46012 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:07:06.273  INFO 46012 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:07:06.288  INFO 46012 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.985 seconds (JVM running for 4.75)
+2021-02-01 00:07:06.415  INFO 46012 --- [RMI TCP Connection(1)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:07:06.416  INFO 46012 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:07:06.417  INFO 46012 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:07:13.485  INFO 46012 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:07:17.351  INFO 46012 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=null, login=null, name=null, salary=null, startDate=null)
+2021-02-01 00:15:41.861  INFO 53200 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 53200 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:15:41.864  INFO 53200 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:15:41.903  INFO 53200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:15:41.903  INFO 53200 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:15:42.658  INFO 53200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:15:42.699  INFO 53200 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:15:43.096  INFO 53200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:15:43.098  INFO 53200 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:15:43.098  INFO 53200 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:15:43.164  INFO 53200 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:15:43.179  INFO 53200 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1276 ms
+2021-02-01 00:15:43.252  INFO 53200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:15:43.315  INFO 53200 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:15:43.317  INFO 53200 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:15:43.417  INFO 53200 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:15:43.422  INFO 53200 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:15:43.468  INFO 53200 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:15:43.475  INFO 53200 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:15:43.519  INFO 53200 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:15:43.519  INFO 53200 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:15:43.529  INFO 53200 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.024s)
+2021-02-01 00:15:43.584  INFO 53200 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:15:43.609  INFO 53200 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:15:43.680  INFO 53200 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:15:43.740  INFO 53200 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:15:44.095  INFO 53200 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:15:44.098  INFO 53200 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:15:44.122  INFO 53200 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:15:44.350  WARN 53200 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:15:44.437  INFO 53200 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:15:45.011  INFO 53200 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:15:45.056  INFO 53200 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:15:45.063  INFO 53200 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.528 seconds (JVM running for 4.196)
+2021-02-01 00:15:45.173  INFO 53200 --- [RMI TCP Connection(2)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:15:45.176  INFO 53200 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:15:45.177  INFO 53200 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:15:56.737  INFO 53200 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:15:59.939  INFO 53200 --- [http-nio-8080-exec-3] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=null, login=null, name=null, salary=null, startDate=null)
+2021-02-01 00:16:39.339  INFO 53200 --- [http-nio-8080-exec-5] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=null, login=null, name=null, salary=null, startDate=null)
+2021-02-01 00:21:11.969  INFO 2240 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 2240 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:21:11.971  INFO 2240 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:21:12.017  INFO 2240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:21:12.017  INFO 2240 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:21:12.761  INFO 2240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:21:12.810  INFO 2240 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 41 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:21:13.211  INFO 2240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:21:13.217  INFO 2240 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:21:13.217  INFO 2240 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:21:13.284  INFO 2240 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:21:13.284  INFO 2240 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1266 ms
+2021-02-01 00:21:13.374  INFO 2240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:21:13.441  INFO 2240 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:21:13.442  INFO 2240 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:21:13.535  INFO 2240 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:21:13.535  INFO 2240 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:21:13.594  INFO 2240 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:21:13.606  INFO 2240 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:21:13.652  INFO 2240 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:21:13.656  INFO 2240 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:21:13.674  INFO 2240 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.031s)
+2021-02-01 00:21:13.722  INFO 2240 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:21:13.749  INFO 2240 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:21:13.802  INFO 2240 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:21:13.871  INFO 2240 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:21:14.218  INFO 2240 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:21:14.218  INFO 2240 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:21:14.249  INFO 2240 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:21:14.504  WARN 2240 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:21:14.587  INFO 2240 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:21:15.163  INFO 2240 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:21:15.209  INFO 2240 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:21:15.217  INFO 2240 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.581 seconds (JVM running for 4.233)
+2021-02-01 00:21:15.695  INFO 2240 --- [RMI TCP Connection(1)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:21:15.695  INFO 2240 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:21:15.698  INFO 2240 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 3 ms
+2021-02-01 00:21:22.800  INFO 2240 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:21:26.445  INFO 2240 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)
+2021-02-01 00:23:50.602  INFO 46192 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 46192 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:23:50.604  INFO 46192 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:23:50.645  INFO 46192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:23:50.645  INFO 46192 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:23:51.389  INFO 46192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:23:51.438  INFO 46192 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 40 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:23:51.841  INFO 46192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:23:51.843  INFO 46192 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:23:51.843  INFO 46192 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:23:51.907  INFO 46192 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:23:51.907  INFO 46192 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1261 ms
+2021-02-01 00:23:51.994  INFO 46192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:23:52.063  INFO 46192 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:23:52.067  INFO 46192 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:23:52.155  INFO 46192 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:23:52.156  INFO 46192 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:23:52.204  INFO 46192 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:23:52.213  INFO 46192 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:23:52.259  INFO 46192 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:23:52.259  INFO 46192 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:23:52.267  INFO 46192 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.023s)
+2021-02-01 00:23:52.321  INFO 46192 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:23:52.352  INFO 46192 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:23:52.420  INFO 46192 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:23:52.484  INFO 46192 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:23:52.830  INFO 46192 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:23:52.835  INFO 46192 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:23:52.860  INFO 46192 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:23:53.091  WARN 46192 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:23:53.181  INFO 46192 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:23:53.795  INFO 46192 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:23:53.842  INFO 46192 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:23:53.849  INFO 46192 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.571 seconds (JVM running for 4.214)
+2021-02-01 00:23:54.484  INFO 46192 --- [RMI TCP Connection(2)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:23:54.484  INFO 46192 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:23:54.485  INFO 46192 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:24:02.041  INFO 46192 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:24:05.762  INFO 46192 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)
+2021-02-01 00:25:13.043  INFO 51844 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 51844 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:25:13.046  INFO 51844 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:25:13.082  INFO 51844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:25:13.083  INFO 51844 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:25:13.818  INFO 51844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:25:13.859  INFO 51844 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:25:14.253  INFO 51844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:25:14.255  INFO 51844 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:25:14.259  INFO 51844 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:25:14.347  INFO 51844 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:25:14.347  INFO 51844 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1263 ms
+2021-02-01 00:25:14.442  INFO 51844 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:25:14.518  INFO 51844 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:25:14.523  INFO 51844 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:25:14.617  INFO 51844 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:25:14.617  INFO 51844 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:25:14.667  INFO 51844 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:25:14.673  INFO 51844 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:25:14.724  INFO 51844 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:25:14.726  INFO 51844 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:25:14.732  INFO 51844 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.024s)
+2021-02-01 00:25:14.787  INFO 51844 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:25:14.817  INFO 51844 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:25:14.887  INFO 51844 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:25:14.951  INFO 51844 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:25:15.305  INFO 51844 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:25:15.310  INFO 51844 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:25:15.335  INFO 51844 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:25:15.576  WARN 51844 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:25:15.649  INFO 51844 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:25:16.230  INFO 51844 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:25:16.281  INFO 51844 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:25:16.291  INFO 51844 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.582 seconds (JVM running for 4.251)
+2021-02-01 00:25:16.388  INFO 51844 --- [RMI TCP Connection(2)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:25:16.389  INFO 51844 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:25:16.390  INFO 51844 --- [RMI TCP Connection(2)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:25:26.701  INFO 51844 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:25:29.339  INFO 51844 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:25:42.098  WARN 51844 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.gmail.renjithkumar1.salarymanagement.exception.ResourceAlreadyExistsException: Employee login not unique]
+2021-02-01 00:25:43.836  INFO 51844 --- [http-nio-8080-exec-6] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:25:47.195  INFO 51844 --- [http-nio-8080-exec-8] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:26:13.262  WARN 51844 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.gmail.renjithkumar1.salarymanagement.exception.ResourceAlreadyExistsException: Employee login not unique]
+2021-02-01 00:26:19.819  INFO 51844 --- [http-nio-8080-exec-7] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0002, login=hpotter2, name=Harry Potter2, salary=1234.98, startDate=2001-11-16)
+2021-02-01 00:26:22.379  INFO 51844 --- [http-nio-8080-exec-3] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16), EmployeeDto(id=emp0002, login=hpotter2, name=Harry Potter2, salary=1234.98, startDate=2001-11-16)])
+2021-02-01 00:33:26.099  INFO 14972 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 14972 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:33:26.100  INFO 14972 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:33:26.137  INFO 14972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:33:26.138  INFO 14972 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:33:26.893  INFO 14972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:33:26.935  INFO 14972 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 35 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:33:27.334  INFO 14972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:33:27.336  INFO 14972 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:33:27.336  INFO 14972 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:33:27.404  INFO 14972 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:33:27.404  INFO 14972 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1265 ms
+2021-02-01 00:33:27.500  INFO 14972 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:33:27.564  INFO 14972 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:33:27.569  INFO 14972 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:33:27.649  INFO 14972 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:33:27.664  INFO 14972 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:33:27.711  INFO 14972 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:33:27.721  INFO 14972 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:33:27.757  INFO 14972 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:33:27.757  INFO 14972 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:33:27.778  INFO 14972 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.024s)
+2021-02-01 00:33:27.835  INFO 14972 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:33:27.862  INFO 14972 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:33:27.933  INFO 14972 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:33:27.994  INFO 14972 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:33:28.346  INFO 14972 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:33:28.347  INFO 14972 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:33:28.375  INFO 14972 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:33:28.627  WARN 14972 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:33:28.708  INFO 14972 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:33:29.394  INFO 14972 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:33:29.447  INFO 14972 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:33:29.461  INFO 14972 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.697 seconds (JVM running for 4.383)
+2021-02-01 00:33:29.876  INFO 14972 --- [RMI TCP Connection(1)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:33:29.876  INFO 14972 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:33:29.878  INFO 14972 --- [RMI TCP Connection(1)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2021-02-01 00:33:47.378  INFO 14972 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0002, login=hpotter2, name=Harry Potter2, salary=1234.98, startDate=2001-11-16)
+2021-02-01 00:33:50.063  INFO 14972 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0002, login=hpotter2, name=Harry Potter2, salary=1234.98, startDate=2001-11-16)])
+2021-02-01 00:34:05.941  INFO 14972 --- [http-nio-8080-exec-3] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:34:07.770  INFO 14972 --- [http-nio-8080-exec-4] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0002, login=hpotter2, name=Harry Potter2, salary=1234.98, startDate=2001-11-16), EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:37:20.882  INFO 30296 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 30296 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:37:20.884  INFO 30296 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:37:20.922  INFO 30296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:37:20.922  INFO 30296 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:37:21.674  INFO 30296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:37:21.717  INFO 30296 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 36 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:37:22.110  INFO 30296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:37:22.114  INFO 30296 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:37:22.117  INFO 30296 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:37:22.193  INFO 30296 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:37:22.193  INFO 30296 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1270 ms
+2021-02-01 00:37:22.270  INFO 30296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:37:22.332  INFO 30296 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:37:22.337  INFO 30296 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:37:22.420  INFO 30296 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:37:22.420  INFO 30296 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:37:22.478  INFO 30296 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:37:22.489  INFO 30296 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:37:22.533  INFO 30296 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:37:22.534  INFO 30296 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:37:22.551  INFO 30296 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.025s)
+2021-02-01 00:37:22.590  INFO 30296 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:37:22.626  INFO 30296 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:37:22.695  INFO 30296 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:37:22.756  INFO 30296 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:37:23.110  INFO 30296 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:37:23.112  INFO 30296 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:37:23.138  INFO 30296 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:37:23.369  WARN 30296 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:37:23.444  INFO 30296 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:37:24.038  INFO 30296 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:37:24.084  INFO 30296 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:37:24.094  INFO 30296 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.544 seconds (JVM running for 4.191)
+2021-02-01 00:37:24.202  INFO 30296 --- [RMI TCP Connection(3)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:37:24.203  INFO 30296 --- [RMI TCP Connection(3)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:37:24.204  INFO 30296 --- [RMI TCP Connection(3)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:37:35.898  INFO 30296 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:37:37.771  INFO 30296 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee records fetched as : FetchEmployeesDto(results=[EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)])
+2021-02-01 00:38:48.800  WARN 30296 --- [http-nio-8080-exec-6] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.gmail.renjithkumar1.salarymanagement.exception.EntityNotFoundException: No such employee]
+2021-02-01 00:38:53.586  WARN 30296 --- [http-nio-8080-exec-5] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.gmail.renjithkumar1.salarymanagement.exception.EntityNotFoundException: No such employee]
+2021-02-01 00:39:05.090  WARN 30296 --- [http-nio-8080-exec-4] .m.m.a.ExceptionHandlerExceptionResolver : Resolved [com.gmail.renjithkumar1.salarymanagement.exception.EntityNotFoundException: No such employee]
+2021-02-01 00:40:06.262  INFO 31112 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Starting SalaryManagementServiceApplication using Java 15 on SGSCECM-4LWQJW2 with PID 31112 (C:\Projects\salary-management-service\target\classes started by renjithkumar.gk in C:\Projects\salary-management-service)
+2021-02-01 00:40:06.264  INFO 31112 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : No active profile set, falling back to default profiles: default
+2021-02-01 00:40:06.299  INFO 31112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2021-02-01 00:40:06.299  INFO 31112 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2021-02-01 00:40:07.033  INFO 31112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-02-01 00:40:07.078  INFO 31112 --- [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 37 ms. Found 1 JPA repository interfaces.
+2021-02-01 00:40:07.475  INFO 31112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2021-02-01 00:40:07.480  INFO 31112 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-02-01 00:40:07.481  INFO 31112 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-02-01 00:40:07.541  INFO 31112 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-02-01 00:40:07.541  INFO 31112 --- [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1241 ms
+2021-02-01 00:40:07.635  INFO 31112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-02-01 00:40:07.698  INFO 31112 --- [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-02-01 00:40:07.699  INFO 31112 --- [restartedMain] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2-console'. Database available at 'jdbc:h2:mem:salarydb'
+2021-02-01 00:40:07.788  INFO 31112 --- [restartedMain] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 7.1.1 by Redgate
+2021-02-01 00:40:07.797  INFO 31112 --- [restartedMain] o.f.c.i.database.base.DatabaseType       : Database: jdbc:h2:mem:salarydb (H2 1.4)
+2021-02-01 00:40:07.846  INFO 31112 --- [restartedMain] o.f.core.internal.database.base.Schema   : Creating schema "salarydb" ...
+2021-02-01 00:40:07.862  INFO 31112 --- [restartedMain] o.f.c.i.s.JdbcTableSchemaHistory         : Creating Schema History table "salarydb"."flyway_schema_history" ...
+2021-02-01 00:40:07.891  INFO 31112 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Current version of schema "salarydb": null
+2021-02-01 00:40:07.891  INFO 31112 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Migrating schema "salarydb" to version "1.1.0 - CREATE-TABLES"
+2021-02-01 00:40:07.921  INFO 31112 --- [restartedMain] o.f.core.internal.command.DbMigrate      : Successfully applied 1 migration to schema "salarydb" (execution time 00:00.026s)
+2021-02-01 00:40:07.971  INFO 31112 --- [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-02-01 00:40:07.999  INFO 31112 --- [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-02-01 00:40:08.071  INFO 31112 --- [restartedMain] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-02-01 00:40:08.124  INFO 31112 --- [restartedMain] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-02-01 00:40:08.549  INFO 31112 --- [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-02-01 00:40:08.552  INFO 31112 --- [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-02-01 00:40:08.585  INFO 31112 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2021-02-01 00:40:08.829  WARN 31112 --- [restartedMain] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-02-01 00:40:08.911  INFO 31112 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-02-01 00:40:09.534  INFO 31112 --- [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 2 endpoint(s) beneath base path '/actuator'
+2021-02-01 00:40:09.580  INFO 31112 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2021-02-01 00:40:09.586  INFO 31112 --- [restartedMain] g.r.s.SalaryManagementServiceApplication : Started SalaryManagementServiceApplication in 3.654 seconds (JVM running for 4.332)
+2021-02-01 00:40:10.153  INFO 31112 --- [RMI TCP Connection(3)-192.168.10.119] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-02-01 00:40:10.155  INFO 31112 --- [RMI TCP Connection(3)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2021-02-01 00:40:10.156  INFO 31112 --- [RMI TCP Connection(3)-192.168.10.119] o.s.web.servlet.DispatcherServlet        : Completed initialization in 1 ms
+2021-02-01 00:40:16.201  INFO 31112 --- [http-nio-8080-exec-1] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234, startDate=2001-11-16)
+2021-02-01 00:40:19.697  INFO 31112 --- [http-nio-8080-exec-2] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=emp0001, login=hpotter1, name=Harry Potter1, salary=1234.00, startDate=2001-11-16)
+2021-02-01 00:40:32.278  INFO 31112 --- [http-nio-8080-exec-3] c.g.r.s.controller.UserController        : New employee record created as :EmployeeDto(id=emp0002, login=hpotter2, name=Harry Potter2, salary=1234.1, startDate=2001-11-16)
+2021-02-01 00:40:37.144  INFO 31112 --- [http-nio-8080-exec-4] c.g.r.s.controller.UserController        : Employee record fetched as : EmployeeDto(id=emp0002, login=hpotter2, name=Harry Potter2, salary=1234.10, startDate=2001-11-16)

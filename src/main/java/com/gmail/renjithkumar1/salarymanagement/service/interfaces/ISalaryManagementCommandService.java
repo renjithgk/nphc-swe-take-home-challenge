@@ -1,14 +1,14 @@
 package com.gmail.renjithkumar1.salarymanagement.service.interfaces;
 
-import com.gmail.renjithkumar1.salarymanagement.dto.SalaryDto;
+import com.gmail.renjithkumar1.salarymanagement.dto.EmployeeDto;
 import org.javatuples.Pair;
 
 public interface ISalaryManagementCommandService {
 
-    Pair<Integer, SalaryDto> createSalary(SalaryDto salaryDto);
+    EmployeeDto createEmployee(EmployeeDto employeeDto);
 
-    Pair<Integer, SalaryDto> updateSalary(Long id, SalaryDto salaryDto);
+    EmployeeDto updateEmployee(String id, EmployeeDto employeeDto);
 
-    Pair<Integer, String> deleteSalary(Long id);
+    void deleteEmployee(String id);
 
 }
