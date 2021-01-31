@@ -5,6 +5,10 @@ import org.javatuples.Pair;
 
 public interface ISalaryManagementCommandService {
 
-    Pair<Integer, SalaryDto> CreateSalary(SalaryDto salaryDto);
+    Pair<Integer, SalaryDto> createSalary(SalaryDto salaryDto);
+
+    Pair<Integer, SalaryDto> updateSalary(Long id, SalaryDto salaryDto);
+
+    Pair<Integer, String> deleteSalary(Long id);
 
 }

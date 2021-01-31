@@ -19,9 +19,27 @@ public class SalaryManagementCommandService implements ISalaryManagementCommandS
         this.salaryManagementRepository = salaryManagementRepository;
     }
 
-    public Pair<Integer, SalaryDto> CreateSalary(SalaryDto salaryDto) {
+    public Pair<Integer, SalaryDto> createSalary(SalaryDto salaryDto) {
         Salary salary = (Salary) new DtoUtils().convertToEntity(new Salary(), salaryDto);
-        this.salaryManagementRepository.save(salary);
+        Salary saved = this.salaryManagementRepository.save(salary);
         return new Pair<>(201, salaryDto);
+    }
+
+    @Override
+    public Pair<Integer, SalaryDto> updateSalary(Long id, SalaryDto salaryDto) {
+        Salary salary = salaryManagementRepository.findById(id).map(s ->
+        {
+            s.setSalary(salaryDto.getSalary());
+            s.setName(salaryDto.getName());
+            return s;
+        }).orElse(null);
+        Salary saved = this.salaryManagementRepository.save(salary);
+        return new Pair<>(201, salaryDto);
+    }
+
+    @Override
+    public Pair<Integer, String> deleteSalary(Long id) {
+       salaryManagementRepository.deleteById(id);
+       return new Pair<>(200, "Deleted record successfully");
     }
 }

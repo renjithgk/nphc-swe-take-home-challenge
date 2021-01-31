@@ -15,7 +15,7 @@ public class OpenAPIConfig {
 
         return new OpenAPI()
                 .info(new Info()
-                        .title("Settlement Service APIs")
+                        .title("Salary Management Service APIs")
                         .version(appVersion)
                         .description(appDesciption)
                         .termsOfService("http://swagger.io/terms/")

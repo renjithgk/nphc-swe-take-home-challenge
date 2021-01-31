@@ -1,4 +1,4 @@
-package com.gmail.renjithkumar1.salarymanagement.controller;
+package com.gmail.renjithkumar1.salarymanagement.exception;
 
 
 import org.apache.commons.collections4.CollectionUtils;

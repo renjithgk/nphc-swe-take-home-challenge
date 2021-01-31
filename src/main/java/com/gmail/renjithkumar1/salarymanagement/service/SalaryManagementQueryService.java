@@ -9,7 +9,9 @@ import org.javatuples.Pair;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
 public class SalaryManagementQueryService implements ISalaryManagementQueryService {
@@ -28,5 +30,10 @@ public class SalaryManagementQueryService implements ISalaryManagementQueryServi
         } else {
             return new Pair<>(404, null);
         }
+    }
+
+    public Pair<Integer, List<SalaryDto>> getSalaries() {
+        List<Salary> salaries = salaryManagementRepository.findAll();
+        return new Pair<>(200, salaries.stream().map(salary -> (SalaryDto) new DtoUtils().convertToDto(salary, new SalaryDto())).collect(Collectors.toList()));
     }
 }

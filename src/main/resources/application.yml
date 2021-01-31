@@ -6,6 +6,9 @@ app:
 
 server:
   port : 8080
+  netty:
+    connection-timeout: 1200000
+    #max response size ?
 
 logging:
   file:
