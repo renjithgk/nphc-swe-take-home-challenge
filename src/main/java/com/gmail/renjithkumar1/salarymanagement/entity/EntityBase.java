@@ -12,10 +12,6 @@ import java.time.Instant;
 @Data
 public abstract class EntityBase implements DtoEntity {
 
-    @Id
-    @Column(name = "id", updatable = false, nullable = false)
-    private String id;
-
     @CreationTimestamp
     @Column(name = "created_at", updatable = false, nullable = false)
     protected Instant createdAt;
@@ -23,9 +19,5 @@ public abstract class EntityBase implements DtoEntity {
     @UpdateTimestamp
     @Column(name = "modified_at")
     protected Instant modifiedAt;
-
-    @Column
-    @Version
-    protected int version;
 }
 

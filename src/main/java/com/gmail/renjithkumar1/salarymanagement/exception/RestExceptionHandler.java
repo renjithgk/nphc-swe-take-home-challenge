@@ -120,6 +120,12 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
         return buildResponseEntity(apiErrorSlim);
     }
 
+    @ExceptionHandler(InvalidFileDataException.class)
+    protected ResponseEntity<Object> handleInvalidFileDataException(InvalidFileDataException ex) {
+        ApiErrorSlim apiErrorSlim = new ApiErrorSlim(BAD_REQUEST, ex.getMessage());
+        return buildResponseEntity(apiErrorSlim);
+    }
+
     /**
      * Handle HttpMessageNotReadableException. Happens when request JSON is malformed.
      *
@@ -178,7 +184,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
     @ExceptionHandler(DataIntegrityViolationException.class)
     protected ResponseEntity<Object> handleDataIntegrityViolation(DataIntegrityViolationException ex, WebRequest request) {
         if (ex.getCause() instanceof ConstraintViolationException) {
-            return buildResponseEntity(new ApiError(HttpStatus.CONFLICT, "Database error", ex.getCause()));
+            return buildResponseEntity(new ApiErrorSlim(CONFLICT, "login column values should be unique"));
         }
         return buildResponseEntity(new ApiError(HttpStatus.INTERNAL_SERVER_ERROR, ex));
     }

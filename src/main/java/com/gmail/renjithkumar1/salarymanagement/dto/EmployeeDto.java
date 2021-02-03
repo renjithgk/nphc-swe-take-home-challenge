@@ -39,7 +39,7 @@ public class EmployeeDto implements DtoEntity {
 
     public boolean validate() {
         try {
-            if (this.salary.signum() < 1) {
+            if (this.salary.signum() < 0) {
                 throw new InvalidPropertyValueException("Invalid salary");
             }
         } catch (NumberFormatException e) {

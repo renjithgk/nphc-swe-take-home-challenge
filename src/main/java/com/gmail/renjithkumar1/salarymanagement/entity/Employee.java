@@ -5,7 +5,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 import javax.persistence.*;
-import javax.validation.constraints.Positive;
+import javax.validation.constraints.*;
 import java.math.BigDecimal;
 import java.time.LocalDate;
 import java.util.Date;
@@ -16,17 +16,25 @@ import java.util.Date;
 @Entity
 public class Employee extends EntityBase {
 
-    @Column(name = "login", nullable = false)
+    @Id
+    @Column(name = "id", updatable = false, nullable = false)
+    private String id;
+
+
+    @Column(name = "login", nullable = false, unique = true)
+    @NotEmpty
     private String login;
 
     @Column(name = "name", nullable = false)
+    @NotEmpty
     private String name;
 
-    @Positive
     @Column(name = "salary", nullable = false)
+    @DecimalMin("0.0")
     private BigDecimal salary;
 
     @Column(name = "startDate", nullable = false)
+    @NotEmpty
     private String startDate;
 
 }
