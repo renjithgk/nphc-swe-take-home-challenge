@@ -8,26 +8,30 @@ Functionality
 
 Authentication and other security factors were not considered in this exercise
 
+Secure credentials are available as Environment variables in all non dev environments and referred in the application-env.yml file
+
 Detailed error message is not passed down to the caller if any.
 
 EventSourcing/Event Driven Architecture is not implemented as this is written as a simple service though the provision for adopting it is available.
 
 CQRS pattern is implemented at Service layer
 
-Secure credentials are available as Environment variables in all non dev environments.
-
-For Dev: H2-InMemory was used
+For Dev: H2-InMemory was used for testing
 
 ## Setup/Installation
+
 Open the POM file or project folder using IntelliJ IDEA or similar IDE for Java and run the application (The application will start listening at localhost:8080)
 
 # Swagger API Docs
+
 Once the application starts running, swagger ui can be viewed at http://localhost:8080/swagger-ui/index.html
 
 # Architecture, Design Patterns, OOPS Principles used
+
 Rest Calls, DI, CQRS, Inheritance & Interfaces, Transaction, TDD, Custom Exception Handling 
 
 # Data Flow
+
 RestAPI(DTO) --> Service(Entity/DTO) --> Repository(Entity) --> H2InMemoryDB(Record) and vice version
 
 ## Usage
