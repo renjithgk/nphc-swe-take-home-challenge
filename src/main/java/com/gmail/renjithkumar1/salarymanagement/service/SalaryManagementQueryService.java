@@ -66,8 +66,6 @@ public class SalaryManagementQueryService implements ISalaryManagementQueryServi
             employees = IterableUtils.toList(salaryManagementRepository.findAll(paging));
         }
 
-        System.out.println(employees);
-
         if (!employees.isEmpty()) {
             return employees.stream().map(employee -> (EmployeeDto) new EmployeeDtoUtils().convertToDto(employee, new EmployeeDto())).collect(Collectors.toList());
         }
