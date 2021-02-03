@@ -108,12 +108,7 @@ public class SalaryManagementCommandService implements ISalaryManagementCommandS
             throw new EntityNotFoundException("No such employee");
         }
 
-        try {
-            this.salaryManagementRepository.save(employee);
-        } catch (DuplicateKeyException e) {
-            System.out.println("Duplicate Key Exception " + e.getMessage());
-        }
-
+        this.salaryManagementRepository.save(employee);
         return employeeDto;
     }
 
