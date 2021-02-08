@@ -153,12 +153,12 @@ public class SalaryManagementServiceApplicationTests {
 
     }
 
-	@Ignore
+	@Test
 	public void should_be_able_to_upload_data_from_csv() throws Exception {
 		String data = "id,login,name,salary,startDate\ne0001,hpotter,Harry Potter,1234.00,16-Nov-01";
-		MockMultipartFile file = new MockMultipartFile("file", "data.csv", null, data.getBytes());
+		MockMultipartFile file = new MockMultipartFile("csvfile", "csvfile.csv", null, data.getBytes());
 		MockMvc mockMvc = MockMvcBuilders.webAppContextSetup(webApplicationContext).build();
-		mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/users/upload", file).file(file).characterEncoding("UTF-8")).andExpect(MockMvcResultMatchers.status().isOk());
+		mockMvc.perform(MockMvcRequestBuilders.multipart("/api/v1/users/upload", file).file(file).characterEncoding("UTF-8")).andExpect(MockMvcResultMatchers.status().isAccepted());
 	}
 
     private String createURLWithPort(String uri) {
